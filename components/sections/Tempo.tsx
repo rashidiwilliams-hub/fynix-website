@@ -128,7 +128,7 @@ export default function Tempo() {
               <span style={{ fontSize: 11, fontWeight: 700, color: "#F25623", letterSpacing: "0.06em", textTransform: "uppercase" }}>Fynix flagship product</span>
             </div>
 
-            <h2 style={{ fontSize: "clamp(1.8rem,3.5vw,2.8rem)", fontWeight: 800, color: "#FAFAFA", lineHeight: 1.1, letterSpacing: "-0.02em", marginBottom: 16 }}>
+            <h2 style={{ fontSize: "clamp(1.55rem,3.5vw,2.55rem)", fontWeight: 800, color: "#FAFAFA", lineHeight: 1.1, letterSpacing: "-0.02em", marginBottom: 16 }}>
               Meet Tempo — one platform for <span style={{ color: "#F25623" }}>your whole operation</span>
             </h2>
 

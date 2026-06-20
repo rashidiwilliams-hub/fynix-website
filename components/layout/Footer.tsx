@@ -6,17 +6,11 @@ const PAD = "clamp(20px, 5vw, 80px)";
 const navLinks = [
   { label: "Portfolio", href: "#portfolio" },
   { label: "Services",  href: "#services"  },
-  { label: "About",     href: "#about"      },
+  { label: "Who We Are", href: "#about"      },
   { label: "Tempo",     href: "#tempo"      },
   { label: "Contact",   href: "#contact"    },
 ];
 
-const socialLinks = [
-  { icon: "logo-instagram", href: "#" },
-  { icon: "logo-facebook",  href: "#" },
-  { icon: "logo-youtube",   href: "#" },
-  { icon: "logo-tiktok",    href: "#" },
-];
 
 const services = [
   "Responsive Web Design",
@@ -63,36 +57,12 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Social icons */}
-        <div style={{ display: "flex", justifyContent: "center", gap: 14, marginBottom: 48 }}>
-          {socialLinks.map(({ icon, href }, i) => (
-            <a
-              key={i}
-              href={href}
-              style={{
-                width: 40,
-                height: 40,
-                borderRadius: 10,
-                background: "rgba(255,255,255,0.08)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                textDecoration: "none",
-                color: "rgba(255,255,255,0.6)",
-              }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.14)"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.08)"; }}
-            >
-              <ion-icon name={icon} style={{ fontSize: 18, color: "rgba(255,255,255,0.6)" }} />
-            </a>
-          ))}
-        </div>
 
         {/* Bottom bar */}
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 24, display: "flex", justifyContent: "center", alignItems: "center", gap: 24, flexWrap: "wrap" }}>
-          <a href="#" style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", textDecoration: "none" }}>Terms & Conditions</a>
+          <a href="/terms" style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", textDecoration: "none" }}>Terms & Conditions</a>
           <span style={{ color: "rgba(255,255,255,0.2)", fontSize: 12 }}>|</span>
-          <a href="#" style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", textDecoration: "none" }}>Privacy Policy</a>
+          <a href="/privacy" style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", textDecoration: "none" }}>Privacy Policy</a>
           <span style={{ color: "rgba(255,255,255,0.2)", fontSize: 12 }}>|</span>
           <span style={{ fontSize: 12, color: "rgba(255,255,255,0.35)" }}>© {new Date().getFullYear()} Fynix Studios. All Rights Reserved.</span>
         </div>

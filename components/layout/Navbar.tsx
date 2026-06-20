@@ -8,7 +8,7 @@ const links = [
   { href: "#services",  label: "Services" },
   { href: "#portfolio", label: "Portfolio" },
   { href: "#tempo",     label: "Tempo" },
-  { href: "#about",     label: "About" },
+  { href: "#contact",   label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -59,20 +59,20 @@ export default function Navbar() {
       </header>
 
       {open && (
-        <div className="fixed inset-0 z-40 flex flex-col pt-20 pb-10"
-          style={{ background: "rgba(13,13,13,0.95)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", paddingLeft: PAD, paddingRight: PAD }}>
-          <ul className="flex flex-col gap-1">
+        <div className="fixed z-40 flex flex-col pb-10"
+          style={{ top: 72, left: 0, right: 0, bottom: 0, background: "rgba(13,13,13,0.97)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", paddingLeft: PAD, paddingRight: PAD, paddingTop: 32, overflowY: "auto" }}>
+          <ul className="flex flex-col">
             {links.map(({ href, label }) => (
               <li key={href}>
                 <a href={href} onClick={() => setOpen(false)}
-                  className="block py-4 border-b font-semibold"
-                  style={{ fontSize: "clamp(1.8rem,8vw,3rem)", color: "#FAFAFA", borderColor: "rgba(255,255,255,0.08)", textDecoration: "none" }}>
+                  className="block py-3 font-semibold"
+                  style={{ fontSize: "clamp(1.8rem,8vw,3rem)", color: "#FAFAFA", textDecoration: "none", fontFamily: "Impact, 'Arial Narrow', sans-serif", letterSpacing: "0.02em", display: "block", overflow: "hidden" }}>
                   {label}
                 </a>
               </li>
             ))}
           </ul>
-          <div className="mt-auto">
+          <div style={{ marginTop: 48 }}>
             <a href="#contact" onClick={() => setOpen(false)}
               style={{ display: "inline-block", background: "#F25623", color: "#fff", fontWeight: 700, fontSize: 15, borderRadius: 8, padding: "14px 32px", textDecoration: "none" }}>
               Talk to us

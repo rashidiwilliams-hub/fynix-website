@@ -31,10 +31,22 @@ export default function Contact() {
     setForm(f => ({ ...f, [k]: v }));
   }
 
-  async function submit(e: React.FormEvent) {
+  function submit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
-    await new Promise(r => setTimeout(r, 900));
+
+    const msg = [
+      `Hi Fynix Studios! I'd like to get in touch.`,
+      ``,
+      `*Name:* ${form.name}`,
+      `*Contact:* ${form.contact}`,
+      `*Service:* ${form.service}`,
+      form.message ? `*Message:* ${form.message}` : "",
+    ].filter(Boolean).join("\n");
+
+    const url = `https://wa.me/5927135786?text=${encodeURIComponent(msg)}`;
+    window.open(url, "_blank");
+
     setLoading(false);
     setSent(true);
   }
@@ -68,7 +80,7 @@ export default function Contact() {
           {/* Left — copy */}
           <div>
             <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#F25623", marginBottom: 16 }}>Get in touch</p>
-            <h2 style={{ fontSize: "clamp(1.8rem,3.5vw,2.8rem)", fontWeight: 800, color: "#0D0D0D", lineHeight: 1.15, letterSpacing: "-0.02em", marginBottom: 24 }}>
+            <h2 style={{ fontSize: "clamp(1.55rem,3.5vw,2.55rem)", fontWeight: 800, color: "#0D0D0D", lineHeight: 1.15, letterSpacing: "-0.02em", marginBottom: 24 }}>
               Tell us what you need.<br /><span style={{ color: "#F25623" }}>We'll make it happen.</span>
             </h2>
             <p style={{ fontSize: 15, color: "rgba(0,0,0,0.55)", lineHeight: 1.75, marginBottom: 40 }}>

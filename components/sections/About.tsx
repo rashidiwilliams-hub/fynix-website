@@ -30,7 +30,7 @@ export default function About() {
             transition={{ duration: 0.7, ease: [0.16,1,0.3,1] }}
           >
             <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#F25623", marginBottom: 16 }}>Who we are</p>
-            <h2 style={{ fontSize: "clamp(1.8rem,3.5vw,2.8rem)", fontWeight: 800, color: "#FAFAFA", lineHeight: 1.15, letterSpacing: "-0.02em", marginBottom: 24 }}>
+            <h2 style={{ fontSize: "clamp(1.55rem,3.5vw,2.55rem)", fontWeight: 800, color: "#FAFAFA", lineHeight: 1.15, letterSpacing: "-0.02em", marginBottom: 24 }}>
               A software studio built<br /><span style={{ color: "#F25623" }}>in the heart of Georgetown.</span>
             </h2>
 

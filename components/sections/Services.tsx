@@ -82,14 +82,14 @@ export default function Services() {
     <section id="services" style={{ background: "#F5F5F5", paddingTop: 100, paddingBottom: 100 }}>
       <style>{`
         .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        @media (max-width: 1024px) { .services-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 640px) { .services-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 1200px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 576px)  { .services-grid { grid-template-columns: 1fr; } }
       `}</style>
       <div style={{ maxWidth: 1440, margin: "0 auto", paddingLeft: PAD, paddingRight: PAD }}>
 
         <div style={{ marginBottom: 56, textAlign: "center" }}>
           <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#F25623", marginBottom: 16 }}>What we build</p>
-          <h2 style={{ fontSize: "clamp(1.8rem,3.5vw,2.8rem)", fontWeight: 800, color: "#0D0D0D", lineHeight: 1.15, letterSpacing: "-0.02em", maxWidth: 680, margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(1.55rem,3.5vw,2.55rem)", fontWeight: 800, color: "#0D0D0D", lineHeight: 1.15, letterSpacing: "-0.02em", maxWidth: 720, margin: "0 auto" }}>
             Everything your business needs<br /><span style={{ color: "#F25623" }}>to grow and operate online.</span>
           </h2>
         </div>

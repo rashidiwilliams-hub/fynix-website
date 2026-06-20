@@ -79,13 +79,32 @@ export default function Hero() {
           width: 100%;
           height: 100%;
         }
+        @media (min-width: 1201px) and (max-width: 1400px) {
+          .hero-carousel-col { transform: scale(0.82); transform-origin: center top; margin-bottom: -82px; }
+        }
+        @media (min-width: 993px) and (max-width: 1200px) {
+          .hero-carousel-col { transform: scale(0.7); transform-origin: center top; margin-bottom: -138px; }
+        }
+        @media (min-width: 769px) and (max-width: 992px) {
+          .hero-carousel-col { transform: scale(0.6); transform-origin: center top; margin-bottom: -172px; }
+        }
+        @media (min-width: 577px) and (max-width: 768px) {
+          .hero-carousel-col { transform: scale(0.55); transform-origin: center top; margin-bottom: -195px; }
+        }
+        @media (min-width: 481px) and (max-width: 576px) {
+          .hero-carousel-col { transform: scale(0.45); transform-origin: center top; margin-bottom: -236px; }
+        }
+        @media (max-width: 480px) {
+          .hero-carousel-col { transform: scale(0.38); transform-origin: center top; margin-bottom: -206px; }
+          .hero-services-strip { display: none; }
+        }
       `}</style>
 
       {/* 2-COL LAYOUT */}
       <div className="hero-layout">
 
         {/* LEFT — text + CTAs + feature cards */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+        <div className="hero-text-col" style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
           <style>{`
             @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
             .hero-cursor {
@@ -99,15 +118,13 @@ export default function Hero() {
             }
           `}</style>
 
-          <h1 style={{ fontSize: "2.5rem", fontWeight: 800, color: "#FAFAFA", lineHeight: 1.25, letterSpacing: "-0.025em", marginBottom: 20 }}>
-            Stop running your<br />business on{" "}
-            <span style={{ whiteSpace: "nowrap" }}>
-              <span ref={typedRef} style={{ color: "#F25623" }} />
-              <span className="hero-cursor" />
-            </span>
+          <h1 className="hero-heading" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, color: "#FAFAFA", lineHeight: 1.25, letterSpacing: "-0.025em", marginBottom: 20 }}>
+            Stop running your<br />
+            business on<br />
+            <span ref={typedRef} style={{ color: "#F25623" }} /><span className="hero-cursor" />
           </h1>
 
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.5)", maxWidth: "90%", lineHeight: 1.7, marginBottom: 36 }}>
+          <p className="hero-subheading" style={{ fontSize: 16, color: "rgba(255,255,255,0.5)", maxWidth: "90%", lineHeight: 1.7, marginBottom: 36 }}>
             Fynix Studios builds software and web solutions for Guyanese businesses — from custom platforms to a full suite of business apps.
           </p>
 
@@ -132,7 +149,7 @@ export default function Hero() {
         </div>
 
         {/* RIGHT — 3D carousel */}
-        <div className="hero-carousel-col" style={{ position: "relative", height: CARD_H + 60, perspective: 1000, perspectiveOrigin: "50% 50%" }}>
+        <div className="hero-carousel-col" style={{ position: "relative", height: CARD_H + 60, perspective: 1000, perspectiveOrigin: "50% 50%", paddingTop: 12, paddingBottom: 12 }}>
           <div className="hero-carousel">
             {IMAGES.map((src, i) => (
               <div
@@ -166,10 +183,10 @@ export default function Hero() {
       </div>
 
       {/* SERVICES STRIP */}
-      <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", padding: "24px 64px", marginTop: 64 }}>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 48, maxWidth: 1280, margin: "0 auto", flexWrap: "wrap" }}>
+      <div className="hero-services-strip" style={{ borderTop: "1px solid rgba(255,255,255,0.07)", padding: "24px 64px", marginTop: 32 }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 24, maxWidth: 1280, margin: "0 auto", flexWrap: "wrap" }}>
           {["Responsive Web Design", "Mobile & Web App Development", "SaaS Platforms", "Branding & Graphic Design", "Automation & Consultation", "Ongoing Support"].map(s => (
-            <span key={s} style={{ fontSize: 13, fontWeight: 500, color: "rgba(255,255,255,0.35)", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>{s}</span>
+            <span key={s} style={{ fontSize: 11, fontWeight: 500, color: "rgba(255,255,255,0.35)", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>{s}</span>
           ))}
         </div>
       </div>

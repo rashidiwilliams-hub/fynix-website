@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: "I have an idea but I don't know where to start — can you help?",
-    a: "That's exactly who we love working with. Book a free discovery call and we'll help you figure out the right solution, realistic scope, and what it would cost to build.",
+    a: "That's exactly who we love working with. Send us a message on WhatsApp or fill out the contact form below and we'll help you figure out the right solution, realistic scope, and what it would cost to build.",
   },
 ];
 
@@ -92,7 +92,7 @@ export default function FAQ() {
 
         <div style={{ marginBottom: 56, textAlign: "center" }}>
           <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#F25623", marginBottom: 16 }}>Got questions?</p>
-          <h2 style={{ fontSize: "clamp(1.8rem,3.5vw,2.8rem)", fontWeight: 800, color: "#0D0D0D", lineHeight: 1.15, letterSpacing: "-0.02em", maxWidth: 600, margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(1.55rem,3.5vw,2.55rem)", fontWeight: 800, color: "#0D0D0D", lineHeight: 1.15, letterSpacing: "-0.02em", maxWidth: 720, margin: "0 auto" }}>
             Everything you need to know<br /><span style={{ color: "#F25623" }}>before we get started.</span>
           </h2>
         </div>

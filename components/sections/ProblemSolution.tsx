@@ -30,10 +30,10 @@ export default function ProblemSolution() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="problem" style={{ background: "#FAFAFA", paddingTop: 100, paddingBottom: 100 }}>
+    <section id="problem" style={{ background: "#FAFAFA", paddingTop: 60, paddingBottom: 60 }}>
       <style>{`
         .ps-split-card { display: grid; grid-template-columns: 1fr 1fr; }
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
           .ps-split-card { grid-template-columns: 1fr; }
           .ps-split-card .ps-divider { display: none; }
         }
@@ -41,9 +41,9 @@ export default function ProblemSolution() {
       <div style={{ maxWidth: 1440, margin: "0 auto", paddingLeft: PAD, paddingRight: PAD }}>
 
         {/* Header */}
-        <div style={{ marginBottom: 64, textAlign: "center" }}>
+        <div style={{ marginBottom: 32, textAlign: "center" }}>
           <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "#F25623", marginBottom: 16 }}>The problem we solve</p>
-          <h2 style={{ fontSize: "clamp(1.8rem,3.5vw,2.8rem)", fontWeight: 800, color: "#0D0D0D", lineHeight: 1.15, letterSpacing: "-0.02em", maxWidth: 700, margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(1.55rem,3.5vw,2.55rem)", fontWeight: 800, color: "#0D0D0D", lineHeight: 1.15, letterSpacing: "-0.02em", maxWidth: 720, margin: "0 auto" }}>
             Your business deserves software<br /><span style={{ color: "#F25623" }}>built around how you actually work.</span>
           </h2>
         </div>
@@ -72,7 +72,7 @@ export default function ProblemSolution() {
               <div className="ps-divider" style={{ position: "absolute", left: "50%", top: "20%", height: "60%", width: 1, background: "#1A1A1A", transform: "translateX(-50%)" }} />
 
               {/* BEFORE */}
-              <div style={{ padding: "28px 24px" }}>
+              <div style={{ padding: "16px 20px" }}>
                 <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(239,68,68,0.6)", marginBottom: 16 }}>Before</div>
                 <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
                   <div style={{ background: "rgba(239,68,68,0.08)", borderRadius: 8, padding: 8, flexShrink: 0 }}>
@@ -86,7 +86,7 @@ export default function ProblemSolution() {
               </div>
 
               {/* WITH FYNIX */}
-              <div style={{ padding: "28px 24px" }}>
+              <div style={{ padding: "16px 20px" }}>
                 <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#F25623", marginBottom: 16 }}>With Fynix</div>
                 <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
                   <div style={{ background: "rgba(242,86,35,0.08)", borderRadius: 8, padding: 8, flexShrink: 0 }}>
@@ -107,7 +107,7 @@ export default function ProblemSolution() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.5 }}
-          style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24, background: "#F25623", borderRadius: 16, padding: "28px 32px", marginTop: 20, flexWrap: "wrap" }}
+          style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24, background: "#F25623", borderRadius: 16, padding: "20px 28px", marginTop: 16, flexWrap: "wrap" }}
         >
           <p style={{ fontSize: 16, fontWeight: 600, color: "#fff", maxWidth: 480 }}>
             Ready to switch? Most businesses are up and running within a week.
